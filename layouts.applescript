@@ -40,8 +40,11 @@ end resize
 on alfred_script(loc)
 	resize(loc)
 end alfred_script
-on run argv
-	resize(item 1 of argv)
-end run
+
+--uncomment these lines to use for command line
+--on run argv
+--	resize(item 1 of argv)
+--end run
+
 --this can be changed to f,t,b,l,r,tl,tr,bl,br or c
 --resize("c")
