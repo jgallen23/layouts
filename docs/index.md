@@ -2,7 +2,7 @@
 
 Layouts is an applescript and an [alfred](http://www.alfredapp.com/) extension to easily move and resize application windows. 
 
-![Example Layout](/ui/layouts.jpg)
+![Example Layout](ui/layouts.jpg)
 
 ##Alfred
 
@@ -26,7 +26,7 @@ I've created an alfred extension, which you can download [here](https://github.c
 ###Hotkey support
 Thanks to Alfred's new hotkey feature, you don't even have to trigger alfred to move your windows around.
 
-![Hotkeys](/ui/layouts-hotkeys.jpg)
+![Hotkeys](ui/layouts-hotkeys.jpg)
 
 ##Applescript
 Here's the applescript that is powering the extension, which you can use by itself:
