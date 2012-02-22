@@ -15,10 +15,13 @@
 		</script>
 	</head>
 	<body>
-		<a href="http://github.com/jgallen23/Layouts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+		<a href="http://github.com/jgallen23/layouts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
 		<div id="wrapper">
 <h1>Layouts</h1>
 <p>Layouts is an applescript and an <a href="http://www.alfredapp.com/">alfred</a> extension to easily move and resize application windows. 
+
+</p>
+<p><img src="/ui/layouts.jpg" alt="Example Layout">
 
 </p>
 <h2>Alfred</h2>
@@ -46,7 +49,7 @@
 <p>Thanks to Alfred&apos;s new hotkey feature, you don&apos;t even have to trigger alfred to move your windows around.
 
 </p>
-<p>(screenshot)
+<p><img src="/ui/layouts-hotkeys.jpg" alt="Hotkeys">
 
 </p>
 <h2>Applescript</h2>
@@ -95,13 +98,16 @@ end resize
 on alfred_script(loc)
     resize(loc)
 end alfred_script
-on run argv
-    resize(item 1 of argv)
-end run
+
+--uncomment these lines to use for command line
+--on run argv
+--    resize(item 1 of argv)
+--end run
+
 --this can be changed to f,t,b,l,r,tl,tr,bl,br or c
 --resize(&quot;c&quot;)</code></pre>
 <h3>Command Line</h3>
-<p>The script will work via the command line too!
+<p>The script will work via the command line too! <em>Make sure to uncomment the on run argv lines if you want to use it this way</em>
 
 </p>
 <pre><code>osascript layouts.applescript f</code></pre>
