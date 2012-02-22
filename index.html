@@ -1,88 +1,115 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <meta charset='utf-8'>
+	<head>
+		<title>Layouts</title>
+		<link type="text/css" rel="stylesheet" href="ui/common.css"/>
+		<link type="text/css" rel="stylesheet" href="ui/ir_black.css"/>
+		<script type="text/javascript">
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-24017782-2']);
+			_gaq.push(['_trackPageview']);
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+		</script>
+	</head>
+	<body>
+		<a href="http://github.com/jgallen23/Layouts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
+		<div id="wrapper">
+<h1>Layouts</h1>
+<p>Layouts is an applescript and an <a href="http://www.alfredapp.com/">alfred</a> extension to easily move and resize application windows. 
 
-  <title>jgallen23/layouts @ GitHub</title>
+</p>
+<h2>Alfred</h2>
+<p>I&apos;ve created an alfred extension, which you can download <a href="https://github.com/jgallen23/layouts/raw/master/dist/Layouts.alfredextension">here</a>.
 
-  <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #b90b17;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #46f4e8; margin-bottom: 3px; }
-    h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #46f4e8; }
-    h3 { text-align: center; color: #46f4e8; }
-    a { color: #46f4e8; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-    pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-  </style>
-</head>
+</p>
+<h3>Command</h3>
+<ul>
+<li>resize [f, t, b, l, r, tl, tr, bl, br, c]</li>
+</ul>
+<h3>Layouts</h3>
+<ul>
+<li>f: full screen</li>
+<li>c: center window </li>
+<li>t: top half of screen</li>
+<li>b: bottom half of screen</li>
+<li>l: left half of screen</li>
+<li>r: right half of screen</li>
+<li>tl: top left quarter of screen </li>
+<li>tr: top right quarter of screen </li>
+<li>bl: bottom left quarter of screen </li>
+<li>br: bottom right quarter of screen </li>
+</ul>
+<h3>Hotkey support</h3>
+<p>Thanks to Alfred&apos;s new hotkey feature, you don&apos;t even have to trigger alfred to move your windows around.
 
-<body>
-  <a href="https://github.com/jgallen23/layouts"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+</p>
+<p>(screenshot)
 
-  <div id="container">
+</p>
+<h2>Applescript</h2>
+<p>Here&apos;s the applescript that is powering the extension, which you can use by itself:
 
-    <div class="download">
-      <a href="https://github.com/jgallen23/layouts/zipball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/zip.png"></a>
-      <a href="https://github.com/jgallen23/layouts/tarball/master">
-        <img border="0" width="90" src="https://github.com/images/modules/download/tar.png"></a>
-    </div>
+</p>
+<pre><code>on resize(loc)
+    set perc to 0.9
+    tell application &quot;Finder&quot;
+        set _b to bounds of window of desktop
+        set w to item 3 of _b
+        set h to item 4 of _b
+    end tell
 
-    <h1><a href="https://github.com/jgallen23/layouts">layouts</a>
-      <span class="small">by <a href="https://github.com/jgallen23">jgallen23</a></span></h1>
+    set front_app to (path to frontmost application as Unicode text)
+    tell application front_app
+        activate
+        if loc contains &quot;tr&quot; then
+            set bounds of window 1 to {(w / 2), 0, w, (h / 2)}
+        else if loc contains &quot;tl&quot; then
+            set bounds of window 1 to {0, 0, (w / 2), (h / 2)}
+        else if loc contains &quot;bl&quot; then
+            set bounds of window 1 to {0, (h / 2), (w / 2), h}
+        else if loc contains &quot;br&quot; then
+            set bounds of window 1 to {{w / 2, (h / 2), w, h}}
+        else if loc contains &quot;t&quot; then
+            set bounds of window 1 to {0, 0, w, (h / 2)}
+        else if loc contains &quot;r&quot; then
+            set bounds of window 1 to {(w / 2), 0, w, h}
+        else if loc contains &quot;l&quot; then
+            set bounds of window 1 to {0, 0, (w / 2), h}
+        else if loc contains &quot;b&quot; then
+            set bounds of window 1 to {0, (w / 2), w, h}
+        else if loc contains &quot;c&quot; then
+            set newW to w * perc
+            set newH to h * perc
+            set newX to (w * (1 - perc))
+            set newY to (h * (1 - perc))
+            set bounds of window 1 to {newX, newY, newW, newH}
+        else
+            set bounds of window 1 to {0, 0, w, h}
+        end if
+    end tell
+end resize
 
-    <div class="description">
-      an applescript and alfred extension to manage window layouts
-    </div>
+on alfred_script(loc)
+    resize(loc)
+end alfred_script
+on run argv
+    resize(item 1 of argv)
+end run
+--this can be changed to f,t,b,l,r,tl,tr,bl,br or c
+--resize(&quot;c&quot;)</code></pre>
+<h3>Command Line</h3>
+<p>The script will work via the command line too!
 
-    
+</p>
+<pre><code>osascript layouts.applescript f</code></pre>
+<p>Go <a href="https://raw.github.com/jgallen23/layouts/master/layouts.applescript">here</a> to download the script
 
-    
-
-    
-
-    
-
-    
-      <h2>Authors</h2>
-      <p>Greg Allen (me@jga.me)<br/>      </p>
-    
-
-    
-      <h2>Contact</h2>
-      <p>Greg (mail@jga23.com)<br/>      </p>
-    
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="https://github.com/jgallen23/layouts/zipball/master">zip</a> or
-      <a href="https://github.com/jgallen23/layouts/tarball/master">tar formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/jgallen23/layouts</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="https://github.com/jgallen23/layouts">jgallen23/layouts</a>
-    </div>
-
-  </div>
-
-</body>
-</html>
+</p>
+<h2>Authors</h2>
+<ul>
+<li>Greg Allen (<a href="http://twitter.com/jgaui">@jgaui</a>) <a href="http://jga.me">jga.me</a></li>
+</ul>
+</div></body></html>

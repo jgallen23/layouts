@@ -1,0 +1,43 @@
+#wrapper { 
+  width: 980px; 
+  margin: 0 auto; 
+}
+
+a {
+  color: #336699  
+}
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+article {
+    max-width: 944px;
+    margin: auto;
+}
+h1 {
+    font-size: 110px;
+    line-height: 120px;
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+h2 {
+    font-size: 42px;
+    line-height: 48px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+h3 {
+    font-size: 26px;
+    line-height: 48px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+p, ul {
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+small, aside {
+    font-size: 10px;
+}
