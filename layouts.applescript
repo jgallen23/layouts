@@ -1,3 +1,4 @@
+-- v0.0.2
 on resize(loc)
 	set perc to 0.9
 	tell application "Finder"
@@ -24,7 +25,7 @@ on resize(loc)
 		else if loc contains "l" then
 			set bounds of window 1 to {0, 0, (w / 2), h}
 		else if loc contains "b" then
-			set bounds of window 1 to {0, (w / 2), w, h}
+			set bounds of window 1 to {0, (h / 2), w, h}
 		else if loc contains "c" then
 			set newW to w * perc
 			set newH to h * perc
