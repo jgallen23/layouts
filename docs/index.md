@@ -6,7 +6,7 @@ Layouts is an applescript and an [alfred](http://www.alfredapp.com/) extension t
 
 ##Alfred
 
-I've created an alfred extension, which you can download [here](https://github.com/jgallen23/layouts/raw/master/dist/Layouts.alfredextension).
+You can download the alfred extension [here](https://github.com/jgallen23/layouts/raw/master/dist/Layouts.alfredextension).
 
 ###Command
 - resize [f, t, b, l, r, tl, tr, bl, br, c]
