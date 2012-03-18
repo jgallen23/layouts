@@ -17,7 +17,7 @@
 	<key>parameter</key>
 	<integer>0</integer>
 	<key>subtitle</key>
-	<string>resizes window (t, b, r, l, tl, tr, bl, br, c or f)</string>
+	<string>resizes window (t, b, r, l, tl, tr, bl, br, c, f or m)</string>
 	<key>title</key>
 	<string>Layouts</string>
 </dict>
