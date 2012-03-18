@@ -5,13 +5,16 @@ alfred: layouts.applescript
 	@echo "Alfred Extension built"
 
 site : docs/index.md 
-	@markx --nohl docs/index.md | cat site/layout/head.html - site/layout/foot.html > site/index.html
+	@cd site && ../node_modules/.bin/markx markx.json 
 	@echo "Site built"
 
 preview-site:
-	@markx --nohl --preview 8001 docs/index.md 
+	@cd site && ../node_modules/.bin/markx --preview 8001 markx.json 
 
 preview-readme:
-	@markx --preview 8001 README.md 
+	@./node_modules/.bin/markx --preview 8001 README.md 
+
+install:
+	npm install markx
 
 .PHONY: preview-docs preview-readme
