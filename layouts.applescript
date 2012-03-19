@@ -1,4 +1,4 @@
--- v0.0.3
+-- v0.0.4
 
 on get_screens()
 	set f to (path to preferences from local domain as Unicode text) & "com.apple.windowserver.plist"
@@ -11,12 +11,22 @@ on get_screens()
 	return {scrRes1, scrRes2}
 end get_screens
 
+on is_inside(pnt, bounds)
+	set x to item 1 of pnt
+	set y to item 2 of pnt
+	if x ≥ item 1 of bounds and x < item 3 of bounds and y ≥ item 2 of bounds and y < item 4 of bounds then
+		return true
+	else
+		return false
+	end if
+end is_inside
+
 on get_screen_bounds(app_bounds)
 	set screens to my get_screens()
 	set app_x to item 1 of app_bounds
 	set app_y to item 2 of app_bounds
 	set screen1 to item 1 of screens
-	if app_x ≥ item 1 of screen1 and app_y ≥ item 2 of screen1 then
+	if my is_inside({app_x, app_y}, screen1) then
 		return screen1
 	else
 		return item 2 of screens
@@ -101,6 +111,12 @@ on resize(loc)
 			set next_screen to my get_next_screen(screen)
 			set app_width to (item 3 of app_bounds) - (item 1 of app_bounds)
 			set app_height to (item 4 of app_bounds) - (item 2 of app_bounds)
+			if app_width > ((item 3 of next_screen) - (item 1 of next_screen)) then
+				set app_width to (item 3 of next_screen)
+			end if
+			if app_height > ((item 4 of next_screen) - (item 2 of next_screen)) then
+				set app_height to (item 4 of next_screen)
+			end if
 			set nsx to item 1 of next_screen
 			set nsy to item 2 of next_screen
 			set x to nsx
@@ -123,4 +139,5 @@ end alfred_script
 
 --this can be changed to f,t,b,l,r,tl,tr,bl,br or c
 --resize("m")
+
 
