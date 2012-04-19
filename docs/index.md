@@ -9,7 +9,7 @@ Layouts is an applescript and an [alfred](http://www.alfredapp.com/) extension t
 You can download the alfred extension [here](https://github.com/jgallen23/layouts/raw/master/dist/Layouts.alfredextension).
 
 ###Command
-- resize [f, t, b, l, r, tl, tr, bl, br, c, m]
+- resize [f, t, b, l, r, tl, tr, bl, br, c, m, reset]
 
 ###Layouts
 - f: full screen
@@ -23,6 +23,7 @@ You can download the alfred extension [here](https://github.com/jgallen23/layout
 - bl: bottom left quarter of screen 
 - br: bottom right quarter of screen 
 - m: move to next monitor
+- reset: recalculate screen size
 
 ###Hotkey support
 Thanks to Alfred's new hotkey feature, you don't even have to trigger alfred to move your windows around.
@@ -40,6 +41,10 @@ The script will work via the command line too! *Make sure to uncomment the on ru
 
 
 ##History
+
+####0.0.5 (04/19/2012)
+- cached screen size so layouts will run much faster
+- fixed some issues with single monitor setups
 
 ####0.0.4 (03/19/2012)
 - fixed a few bugs in the multi monitor support
