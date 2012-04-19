@@ -4,7 +4,7 @@ alfred: layouts.applescript
 	@./build.py && cd alfred/out && zip tmp.zip * && mv tmp.zip ../../dist/Layouts.alfredextension
 	@echo "Alfred Extension built"
 
-site : docs/index.md install
+site : docs/index.md
 	@cd site && ../node_modules/.bin/markx markx.json 
 	@echo "Site built"
 
