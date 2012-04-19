@@ -5,7 +5,7 @@
 	<key>action</key>
 	<false/>
 	<key>background</key>
-	<true/>
+	<false/>
 	<key>category</key>
 	<string>APPLESCRIPTS</string>
 	<key>command</key>
@@ -17,7 +17,7 @@
 	<key>parameter</key>
 	<integer>0</integer>
 	<key>subtitle</key>
-	<string>resizes window (t, b, r, l, tl, tr, bl, br, c, f or m)</string>
+	<string>resizes window (t, b, r, l, tl, tr, bl, br, c, f, m, reset)</string>
 	<key>title</key>
 	<string>Layouts</string>
 </dict>
