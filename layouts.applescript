@@ -110,8 +110,14 @@ end get_next_screen
 
 on resize(loc)
 	set screens to false
-	set perc to 0.9
-	
+	set perc to 0.8
+	set menubar_height to 30
+
+	tell application "System Events" to tell process "Dock"
+		set dock_dimensions to size in list 1
+		set dock_height to item 2 of dock_dimensions
+	end tell
+
 	set front_app to (path to frontmost application as Unicode text)
 	tell application front_app
 		set app_bounds to bounds of window 1
@@ -166,9 +172,9 @@ on resize(loc)
 				set h to sy + sh
 			else if loc is "c" then
 				set x to sx + sw * (1 - perc)
-				set y to sy + sh * (1 - perc)
+				set y to sy + sh * (1 - perc) + menubar_height
 				set w to sx + sw * perc
-				set h to sy + sh * perc
+				set h to sy + sh * perc - dock_height
 			else if loc is "f" then
 				set x to sx
 				set y to sy
