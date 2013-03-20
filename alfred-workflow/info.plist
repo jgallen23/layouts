@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>bundleid</key>
-	<string>jga.layouts</string>
+	<string>jga.alfred.layouts</string>
 	<key>connections</key>
 	<dict>
 		<key>2D9B5608-8924-44BB-ACE3-06F124842A7D</key>
