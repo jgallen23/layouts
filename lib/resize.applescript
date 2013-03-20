@@ -25,7 +25,7 @@ on makeDefaultLayouts()
   set centerLarge to makeLayout("Center Large", "center", 0.1, 0.1, 0.9, 0.9)
   set centerSmall to makeLayout("Center Small", "centersmall", 0.3, 0.3, 0.7, 0.7)
 
-  set layouts to {topLeft, topRight, bottomRight, bottomLeft, top, _right, bottom, _left, centerLarge, centerSmall, zoom}
+  set layouts to { topLeft, topRight, bottomRight, bottomLeft, top, _right, bottom, _left, centerLarge, centerSmall, zoom }
 
   return layouts
 

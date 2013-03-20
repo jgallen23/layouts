@@ -5,6 +5,7 @@ module.exports = function(grunt) {
     concat: {
       app: {
         src: [
+          'lib/utils.applescript',
           'lib/displays.applescript',
           'lib/resize.applescript',
           'lib/layouts.applescript'
@@ -45,7 +46,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['concat', 'shell:compile']);
-  grunt.registerTask('test', ['shell:test']);
+  grunt.registerTask('test', ['default', 'shell:test']);
   grunt.registerTask('dev', ['watch:app']);
   grunt.registerTask('alfred', ['default', 'shell:alfred']);
 }

@@ -11,6 +11,11 @@ on run argv
   else
     set layouts to makeDefaultLayouts()
     set layout to findLayout(layouts, theLayoutKey)
+
+    if layout is false then
+      set sizes to explode(" ", theLayoutKey)
+      set layout to makeLayout("Temp", "tmp", (item 1 of sizes), (item 2 of sizes), (item 3 of sizes), (item 4 of sizes))
+    end if
     resize(theApp, screenBounds, layout)
   end if
 
