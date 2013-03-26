@@ -1,6 +1,7 @@
 {
   "name": "layouts",
   "private": true,
+  "version": "2.0.0",
   "devDependencies": {
     "grunt-shell": "~0.2.1",
     "grunt-contrib-concat": "~0.1.3",

@@ -157,7 +157,7 @@
 	<key>createdby</key>
 	<string>JGAui</string>
 	<key>description</key>
-	<string>Simple Window Manager</string>
+  <string>Simple Window Manager v2.0.0</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
