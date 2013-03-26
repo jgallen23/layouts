@@ -29,16 +29,7 @@
 			</dict>
 		</array>
 		<key>4A3C9A90-372E-404D-AF8F-53F3F4FA6F61</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>1446CE1A-ACF9-4F9F-AB95-170D396F95D5</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-			</dict>
-		</array>
+		<array/>
 		<key>4BBD7242-BD9D-4D8E-98F9-CB61E3FC3F39</key>
 		<array>
 			<dict>
@@ -251,27 +242,17 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>action</key>
-				<integer>0</integer>
-				<key>argument</key>
-				<integer>3</integer>
-				<key>argumenttext</key>
-				<string>centersmall</string>
-				<key>hotkey</key>
-				<integer>7</integer>
-				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>X</string>
-				<key>leftcursor</key>
-				<false/>
-				<key>modsmode</key>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>script</key>
+				<string>osascript layouts.scpt "{query}"</string>
+				<key>type</key>
 				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.trigger.hotkey</string>
+			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>B35E46CC-D76A-4961-B412-23E2297299F1</string>
+			<string>4A3C9A90-372E-404D-AF8F-53F3F4FA6F61</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -301,25 +282,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<true/>
-				<key>output</key>
+				<key>action</key>
 				<integer>0</integer>
-				<key>removeextension</key>
+				<key>argument</key>
+				<integer>3</integer>
+				<key>argumenttext</key>
+				<string>centersmall</string>
+				<key>hotkey</key>
+				<integer>7</integer>
+				<key>hotmod</key>
+				<integer>1966080</integer>
+				<key>hotstring</key>
+				<string>X</string>
+				<key>leftcursor</key>
 				<false/>
-				<key>sticky</key>
-				<false/>
-				<key>text</key>
-				<string>{query}</string>
-				<key>title</key>
-				<string>Layouts</string>
+				<key>modsmode</key>
+				<integer>0</integer>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
+			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
-			<string>1446CE1A-ACF9-4F9F-AB95-170D396F95D5</string>
+			<string>B35E46CC-D76A-4961-B412-23E2297299F1</string>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -443,21 +426,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>escaping</key>
-				<integer>62</integer>
-				<key>script</key>
-				<string>osascript layouts.scpt "{query}"</string>
-				<key>type</key>
-				<integer>0</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>4A3C9A90-372E-404D-AF8F-53F3F4FA6F61</string>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>action</key>
 				<integer>0</integer>
 				<key>argument</key>
@@ -560,11 +528,6 @@
 	<string></string>
 	<key>uidata</key>
 	<dict>
-		<key>1446CE1A-ACF9-4F9F-AB95-170D396F95D5</key>
-		<dict>
-			<key>ypos</key>
-			<real>760</real>
-		</dict>
 		<key>2D9B5608-8924-44BB-ACE3-06F124842A7D</key>
 		<dict>
 			<key>ypos</key>
