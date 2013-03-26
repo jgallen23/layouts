@@ -3,8 +3,19 @@ module.exports = function(grunt) {
     info: grunt.file.readJSON('package.json'),
     dist: 'dist/layouts.applescript',
     compiledDist: 'dist/layouts.scpt',
+    meta: {
+      banner: '-- <%= info.name %>\n'+
+              '-- v<%= info.version %>\n'+
+              '-- <%= info.homepage %>\n'+
+              '-- copyright <%= info.copyright %> <%= grunt.template.today("yyyy") %>\n'+
+              '-- <%= info.license %> License\n'+
+              '\n'
+    },
     concat: {
       app: {
+        options: {
+          banner: '<%= meta.banner %>'
+        },
         src: [
           'lib/utils.applescript',
           'lib/displays.applescript',
