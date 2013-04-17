@@ -1,3 +1,24 @@
+-- Layouts
+-- v2.0.0
+-- http://projects.jga.me/layouts
+-- copyright JGA 2013
+-- MIT License
+
+
+on explode(delimiter, input)
+  local delimiter, input, ASTID
+  set ASTID to AppleScript's text item delimiters
+  try
+    set AppleScript's text item delimiters to delimiter
+    set input to text items of input
+    set AppleScript's text item delimiters to ASTID
+    return input --> list
+  on error eMsg number eNum
+    set AppleScript's text item delimiters to ASTID
+    error "Can't explode: " & eMsg number eNum
+  end try
+end explode
+
 
 on getDisplayBounds()
   --TODO: multi monitor support
@@ -34,7 +55,7 @@ on makeDefaultLayouts()
   set centerLarge to makeLayout("Center Large", "center", 0.1, 0.1, 0.9, 0.9)
   set centerSmall to makeLayout("Center Small", "centersmall", 0.3, 0.3, 0.7, 0.7)
 
-  set layouts to {topLeft, topRight, bottomRight, bottomLeft, top, _right, bottom, _left, centerLarge, centerSmall, zoom}
+  set layouts to { topLeft, topRight, bottomRight, bottomLeft, top, _right, bottom, _left, centerLarge, centerSmall, zoom }
 
   return layouts
 
@@ -91,6 +112,11 @@ on run argv
   else
     set layouts to makeDefaultLayouts()
     set layout to findLayout(layouts, theLayoutKey)
+
+    if layout is false then
+      set sizes to explode(" ", theLayoutKey)
+      set layout to makeLayout("Temp", "tmp", (item 1 of sizes), (item 2 of sizes), (item 3 of sizes), (item 4 of sizes))
+    end if
     resize(theApp, screenBounds, layout)
   end if
 
