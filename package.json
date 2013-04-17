@@ -1,0 +1,14 @@
+{
+  "name": "Layouts",
+  "private": true,
+  "version": "2.0.0",
+  "homepage": "http://projects.jga.me/layouts",
+  "copyright": "JGA",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-shell": "~0.2.1",
+    "grunt-contrib-concat": "~0.1.3",
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.3.1"
+  }
+}
