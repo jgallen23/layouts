@@ -1,4 +1,19 @@
 
+2.0.0 / 2013-04-17 
+==================
+
+  * removed site submodule
+  * [alfred] allow custom layout
+  * [alfred] updated workflow
+  * [grunt] added banner on top of applescript file
+  * [alfred] build with version in description, script for zipping workflow
+  * [alfred] updated workflow
+  * added custom size example to alfred, added notifications
+  * allow for passing in custom size
+  * changed alfred bundle id
+  * complete rewrite and initial work on alfred workflow
+  * updated site
+
 0.0.5 / 2012-04-19 
 ==================
 
