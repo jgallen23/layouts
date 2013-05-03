@@ -1,4 +1,11 @@
 
+2.1.0 / 2013-05-03 
+==================
+
+  * [grunt] runTest task
+  * [displays] factor in dock size
+  * Merge branch 'feature/workflow'
+
 2.0.0 / 2013-04-17 
 ==================
 
