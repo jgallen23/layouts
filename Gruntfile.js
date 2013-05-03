@@ -53,6 +53,13 @@ module.exports = function(grunt) {
       app: {
         files: '<%= concat.app.src %>',
         tasks: ['build']
+      },
+      runTest: {
+        files: '<%= concat.app.src %>',
+        tasks: [
+          'build',
+          'shell:test'
+        ]
       }
     }
   });
