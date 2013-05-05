@@ -118,6 +118,17 @@
 				<string></string>
 			</dict>
 		</array>
+		<key>D16AC71F-1411-458B-90C2-2DFD4C38AEB1</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4A3C9A90-372E-404D-AF8F-53F3F4FA6F61</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
 		<key>D492AA39-6473-48DF-8C81-88FBEEC71368</key>
 		<array>
 			<dict>
@@ -202,11 +213,9 @@
 				<key>argumenttext</key>
 				<string>left</string>
 				<key>hotkey</key>
-				<integer>123</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>12451840</integer>
-				<key>hotstring</key>
-				<string>←</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -227,11 +236,9 @@
 				<key>argumenttext</key>
 				<string>right</string>
 				<key>hotkey</key>
-				<integer>124</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>12451840</integer>
-				<key>hotstring</key>
-				<string>→</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -252,11 +259,9 @@
 				<key>argumenttext</key>
 				<string>top</string>
 				<key>hotkey</key>
-				<integer>126</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>12451840</integer>
-				<key>hotstring</key>
-				<string>↑</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -277,11 +282,9 @@
 				<key>argumenttext</key>
 				<string>bottom</string>
 				<key>hotkey</key>
-				<integer>125</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>12451840</integer>
-				<key>hotstring</key>
-				<string>↓</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -302,11 +305,9 @@
 				<key>argumenttext</key>
 				<string>zoom</string>
 				<key>hotkey</key>
-				<integer>6</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>Z</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -342,11 +343,9 @@
 				<key>argumenttext</key>
 				<string>center</string>
 				<key>hotkey</key>
-				<integer>8</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>C</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -367,11 +366,9 @@
 				<key>argumenttext</key>
 				<string>centersmall</string>
 				<key>hotkey</key>
-				<integer>7</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>X</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -392,11 +389,9 @@
 				<key>argumenttext</key>
 				<string>topleft</string>
 				<key>hotkey</key>
-				<integer>18</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>!</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -417,11 +412,9 @@
 				<key>argumenttext</key>
 				<string>topright</string>
 				<key>hotkey</key>
-				<integer>19</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>@</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -442,11 +435,9 @@
 				<key>argumenttext</key>
 				<string>bottomleft</string>
 				<key>hotkey</key>
-				<integer>20</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>#</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -467,11 +458,9 @@
 				<key>argumenttext</key>
 				<string>bottomright</string>
 				<key>hotkey</key>
-				<integer>21</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>$</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -492,11 +481,9 @@
 				<key>argumenttext</key>
 				<string>0 0 .4 1</string>
 				<key>hotkey</key>
-				<integer>41</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
-				<key>hotstring</key>
-				<string>:</string>
+				<integer>0</integer>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -517,11 +504,11 @@
 				<key>argumenttext</key>
 				<string>.4 0 1 1</string>
 				<key>hotkey</key>
-				<integer>39</integer>
+				<integer>0</integer>
 				<key>hotmod</key>
-				<integer>1966080</integer>
+				<integer>0</integer>
 				<key>hotstring</key>
-				<string>"</string>
+				<string></string>
 				<key>leftcursor</key>
 				<false/>
 				<key>modsmode</key>
@@ -531,6 +518,101 @@
 			<string>alfred.workflow.trigger.hotkey</string>
 			<key>uid</key>
 			<string>9A1C878F-2C40-4803-BF6D-3A4B00BB17DB</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>llayouts</string>
+				<key>runningsubtext</key>
+				<string>Please Wait…</string>
+				<key>script</key>
+				<string>cat &lt;&lt; EOF
+&lt;?xml version='1.0'?&gt;&lt;items&gt;
+  &lt;item uid='left' arg='left' valid='yes'&gt;
+    &lt;title&gt;left&lt;/title&gt;
+    &lt;subtitle&gt;'Left' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='right' arg='right' valid='yes'&gt;
+    &lt;title&gt;right&lt;/title&gt;
+    &lt;subtitle&gt;'Right' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='top' arg='top' valid='yes'&gt;
+    &lt;title&gt;top&lt;/title&gt;
+    &lt;subtitle&gt;'Top' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='bottom' arg='bottom' valid='yes'&gt;
+    &lt;title&gt;bottom&lt;/title&gt;
+    &lt;subtitle&gt;'Bottom' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='zoom' arg='zoom' valid='yes'&gt;
+    &lt;title&gt;zoom&lt;/title&gt;
+    &lt;subtitle&gt;'Zoom' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='center' arg='center' valid='yes'&gt;
+    &lt;title&gt;center&lt;/title&gt;
+    &lt;subtitle&gt;'Center' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='centersmall' arg='centersmall' valid='yes'&gt;
+    &lt;title&gt;centersmall&lt;/title&gt;
+    &lt;subtitle&gt;'Centersmall' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='topleft' arg='topleft' valid='yes'&gt;
+    &lt;title&gt;topleft&lt;/title&gt;
+    &lt;subtitle&gt;'Topleft' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='topright' arg='topright' valid='yes'&gt;
+    &lt;title&gt;topright&lt;/title&gt;
+    &lt;subtitle&gt;'Topright' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='bottomleft' arg='bottomleft' valid='yes'&gt;
+    &lt;title&gt;bottomleft&lt;/title&gt;
+    &lt;subtitle&gt;'Bottomleft' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='bottomright' arg='bottomright' valid='yes'&gt;
+    &lt;title&gt;bottomright&lt;/title&gt;
+    &lt;subtitle&gt;'Bottomright' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='0 0 .4 1' arg='0 0 .4 1' valid='yes'&gt;
+    &lt;title&gt;0 0 .4 1&lt;/title&gt;
+    &lt;subtitle&gt;'0 0 .4 1' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+  &lt;item uid='.4 0 1 1' arg='.4 0 1 1' valid='yes'&gt;
+    &lt;title&gt;.4 0 1 1&lt;/title&gt;
+    &lt;subtitle&gt;'.4 0 1 1' movement&lt;/subtitle&gt;
+    &lt;icon&gt;icon.png&lt;/icon&gt;
+  &lt;/item&gt;
+&lt;/items&gt;
+EOF</string>
+				<key>subtext</key>
+				<string>Resize Current Window</string>
+				<key>title</key>
+				<string>Layouts</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>D16AC71F-1411-458B-90C2-2DFD4C38AEB1</string>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -591,6 +673,11 @@
 		<dict>
 			<key>ypos</key>
 			<real>880</real>
+		</dict>
+		<key>D16AC71F-1411-458B-90C2-2DFD4C38AEB1</key>
+		<dict>
+			<key>ypos</key>
+			<real>1720</real>
 		</dict>
 		<key>D492AA39-6473-48DF-8C81-88FBEEC71368</key>
 		<dict>
