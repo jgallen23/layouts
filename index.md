@@ -4,7 +4,7 @@ github: github.com/jgallen23/layouts
 builtBy: Greg Allen
 builtTwitter: jgaui
 twitterFollow: JGAui
-twitterShare: true
+twitterShare: Layouts - an @alfredapp workflow for window management
 analytics: UA-24017782-2
 ---
 #Layouts v2.0
