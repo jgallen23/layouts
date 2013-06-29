@@ -1,9 +1,18 @@
 
+on getScreens()
+  set tmp to do shell script "PWD"
+  set myPath to POSIX path of (path to me) as string
+  set dirname to (do shell script "dirname " & myPath) as string
+  
+  set scrString to do shell script dirname & "/screens"
+  set scrRes to explode(",", scrString)
+
+  return scrRes
+end getScreens
+
 on getDisplayBounds()
   --TODO: multi monitor support
-  tell application "Finder"
-    set scrRes to bounds of window of desktop
-  end tell
+  set scrRes to getScreens()
   tell application "System Events"
     tell dock preferences
       set dockProperties to get properties
@@ -29,3 +38,4 @@ on getDisplayBounds()
 
   return scrRes
 end getDisplayBounds
+

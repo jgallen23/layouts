@@ -37,7 +37,7 @@ module.exports = function(grunt) {
         }
       },
       alfred: {
-        command: 'cp -v <%= compiledDist %> alfred-workflow/',
+        command: 'cp -v <%= compiledDist %> alfred-workflow/ && cp -v dist/screens alfred-workflow/',
         options: {
           stdout: true
         }
@@ -47,6 +47,20 @@ module.exports = function(grunt) {
       },
       alfredZip: {
         command: 'cd alfred-workflow/ && zip tmp * && mv tmp.zip ../dist/Layouts.alfredworkflow'
+      },
+      compileScreens: {
+        command: 'gcc -o dist/screens -Wall -std=c99 lib/screens.m -framework Foundation -framework AppKit -lobjc',
+        options: {
+          stdout: true,
+          stderr: true
+        }
+      },
+      runScreens: {
+        command: './dist/screens',
+        options: {
+          stdout: true,
+          stderr: true
+        }
       }
     },
     watch: {
@@ -60,6 +74,13 @@ module.exports = function(grunt) {
           'build',
           'shell:test'
         ]
+      },
+      screens: {
+        files: 'lib/screens.m',
+        tasks: [
+          'shell:compileScreens',
+          'shell:runScreens'
+        ]
       }
     }
   });
@@ -68,8 +89,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-shell');
 
   grunt.registerTask('default', ['build', 'alfred']);
-  grunt.registerTask('build', ['concat', 'shell:compile']);
+  grunt.registerTask('build', ['concat', 'shell:compile', 'shell:compileScreens']);
   grunt.registerTask('test', ['default', 'shell:test']);
   grunt.registerTask('dev', ['watch:app']);
-  grunt.registerTask('alfred', ['build', 'shell:alfred', 'shell:alfredVersion', 'shell:alfredZip']);
+  grunt.registerTask('alfred', ['shell:alfred', 'shell:alfredVersion', 'shell:alfredZip']);
+  grunt.registerTask('dev:screens', ['watch:screens']);
 }
