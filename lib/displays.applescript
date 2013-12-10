@@ -2,9 +2,9 @@
 on getScreens()
   set tmp to do shell script "PWD"
   set myPath to POSIX path of (path to me) as string
-  set dirname to (do shell script "dirname " & myPath) as string
+  set dirname to (do shell script "dirname \"" & myPath & "\"") as string
   
-  set scrString to do shell script dirname & "/screens"
+  set scrString to do shell script "\"" & dirname & "/screens\""
   set scrRes to explode(",", scrString)
 
   return scrRes
