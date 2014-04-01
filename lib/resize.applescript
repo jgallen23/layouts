@@ -1,4 +1,3 @@
-
 on makeLayout(_name, _key, x1, y1, x2, y2)
   script layout
     property theName : _name
@@ -46,8 +45,8 @@ end findLayout
 
 on resize(theApp, theScreenBounds, theLayout)
 
-  tell application theApp
-    set appBounds to bounds of window 1
+  tell application "System Events" to tell application process theApp
+    set appBounds to get size of window 1
     set sx to item 1 of theScreenBounds
     set sy to item 2 of theScreenBounds
     set sw to (item 3 of theScreenBounds) - sx
@@ -57,7 +56,13 @@ on resize(theApp, theScreenBounds, theLayout)
     set x2 to sx + (sw * (x2Percentage of theLayout))
     set y2 to sy + (sh * (y2Percentage of theLayout))
     activate
-    set bounds of window 1 to { x1, y1, x2, y2 }
+		try
+			set bounds of window 1 to {x1, y1, x2, y2}
+		on error
+			tell window 1
+				set {position, size} to {{x1, y1}, {x2, y2}}
+			end tell
+		end try
   end tell
 end resize
 
