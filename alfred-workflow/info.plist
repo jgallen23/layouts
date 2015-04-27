@@ -323,7 +323,15 @@
 				<key>escaping</key>
 				<integer>62</integer>
 				<key>script</key>
-				<string>osascript layouts.scpt "{query}"</string>
+				<string># if you have only one monitor
+# osascript layouts.scpt "{query}"
+
+# if you have two monitors
+# you must pass 4 params more: 
+# 	width and height of majorScreen, width ans height of the other
+osascript layouts.scpt "{query}" 1440 900 1920 1080
+
+# if you have more than 3 monitors, modify the script by yourself plz. :)</string>
 				<key>type</key>
 				<integer>0</integer>
 			</dict>
